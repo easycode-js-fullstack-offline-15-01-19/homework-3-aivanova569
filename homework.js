@@ -2,15 +2,13 @@
 // ---------------------- Ivanova Anastasiia ---------------------
 
 // ---------------------------- Cycles ---------------------------
-// ------------------------------ 1 ------------------------------
+// ------------------------------ !1! ------------------------------
 let string = 'i am in the easycode';
 let newString = '';
 
 for (let i = 0; i < string.length; i++) {
-	if (string[i - 1] === ' ') {
+	if (i === 0 || string[i - 1] === ' ') {
 		newString += string[i].toUpperCase()
-	} else if (i === 0) {
-		newString += string[0].toUpperCase()
 	} else {
 		newString += string[i]
 	}
@@ -32,16 +30,16 @@ for (let i = 1; i <= 10; i++) {
    	result *= i;
 }
 
-// ------------------------------ 4 ------------------------------
+// ------------------------------ !4! ------------------------------
 let line = 'JavaScript is a pretty good language';
 let newLine = '';
 
 for (let i = 0; i < line.length; i++) {
 	if (line[i - 1] === ' ') {
 		newLine += line[i].toUpperCase()
-	} else {
-		newLine += line[i].split(' ').join('')
-	}
+	} else if (line[i] !== ' ') {
+		newLine += line[i]
+	}	
 }
 
 // ------------------------------ 5 ------------------------------
